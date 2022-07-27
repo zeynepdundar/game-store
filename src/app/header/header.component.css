@@ -8,3 +8,50 @@ h2 {
   font-size: 28px;
   margin-left: 1.25rem;
 }
+
+/* navbar styles*/
+nav {
+  font-family: var(--mono);
+  font-size: 80%;
+  padding: 1rem;
+}
+
+nav h1 a {
+  font-family: var(--sans);
+}
+
+nav [class*="fa-"] {
+  font-size: 150%;
+  color: var(--green);
+}
+
+nav h1 [class*="fa-"] {
+  font-size: 100%;
+  color: var(--green);
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+nav li:first-child {
+  flex-basis: 100%;
+  text-align: center;
+}
+nav a {
+  color: var(--whey);
+  text-decoration: none;
+  display: block;
+}
+
+nav a:hover,
+nav [class*="fa-"]:hover {
+  color: var(--warmorange);
+}

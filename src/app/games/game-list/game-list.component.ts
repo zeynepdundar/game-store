@@ -1,3 +1,4 @@
+import { Game } from './../game.model';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class GameListComponent implements OnInit {
   allowNewGame = false;
 
-  games = ['one', 'two'];
+  games: Game[] = [new Game('Game x', 'bundle y', 'owner z', 'image')];
 
   constructor() {}
 
