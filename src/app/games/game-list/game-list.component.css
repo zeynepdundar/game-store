@@ -1,0 +1,14 @@
+.game-list {
+  margin: 0 auto;
+  width: 60%;
+}
+
+h3 {
+  font: bold;
+}
+
+.no-results {
+  color: #45187f;
+  font-weight: bolder;
+  text-align: center;
+}

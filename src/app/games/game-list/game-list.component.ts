@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GameListComponent implements OnInit {
   allowNewGame = false;
-  name = 'game-store';
+
+  games = ['one', 'two'];
 
   constructor() {}
 
