@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Game } from './../../game.model';
 
 @Component({
   selector: 'app-game-item',
@@ -6,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./game-item.component.css'],
 })
 export class GameItemComponent implements OnInit {
-  gameName = 'test game';
-  bundle = 'testbundle.com';
-  owner = 'erdem@gmail.com';
+  @Input() game: Game = new Game(
+    'test game',
+    'testbundle.com',
+    'erdem@gmail.com',
+    'nothing'
+  );
+
   constructor() {}
 
   ngOnInit(): void {}

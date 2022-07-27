@@ -1,5 +1,8 @@
 <div class="game-list">
   <h3>Game List</h3>
   <p class="no-results">no records found</p>
-  <app-game-item *ngFor="let game of games; let i = index"></app-game-item>
+  <app-game-item
+    *ngFor="let game of games; let i = index"
+    [game]="game"
+  ></app-game-item>
 </div>
