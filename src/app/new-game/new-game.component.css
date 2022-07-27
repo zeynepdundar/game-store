@@ -1,0 +1,80 @@
+.new-game {
+  /* background-color: rgb(31, 31, 31);
+    padding: 1rem;
+    margin: 2rem auto;
+    width: 50rem;
+    max-width: 95%;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 1px 8px rgb(31, 31, 31); */
+
+  text-align: center;
+  max-width: 45rem;
+  width: 90%;
+  margin: auto;
+  margin-top: 1rem;
+  position: relative;
+  border-radius: 14px;
+  padding: 1rem;
+}
+
+.game-list {
+  margin: 0 auto;
+  width: 60%;
+}
+
+.container {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: row wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 1rem;
+}
+
+.file-upload {
+  border: none;
+}
+
+button {
+  border: 1px solid #51d5ad;
+  background-color: #51d5ad;
+  color: white;
+  border-radius: 26px;
+  width: 15%;
+  border-radius: 26px;
+  padding: 1rem;
+}
+
+button:hover {
+  background-color: #43ab8c;
+}
+
+button:disabled,
+button:focus:disabled,
+button:hover:disabled,
+button:active:disabled {
+  background: #c2c8c8;
+  border-color: #c2c8c8;
+  color: #666666;
+  cursor: not-allowed;
+}
+
+h3 {
+  font: bold;
+}
+
+input {
+  font: inherit;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 20rem;
+  max-width: 100%;
+}
+.summary h2 {
+  font-size: 2rem;
+  margin-top: 0;
+}

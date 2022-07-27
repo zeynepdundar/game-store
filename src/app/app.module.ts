@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { SuccessAlertComponent } from './success-alert/success-alert.component';
 import { GameListComponent } from './game-list/game-list.component';
 import { GameItemComponent } from './game-item/game-item.component';
+import { NewGameComponent } from './new-game/new-game.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { GameItemComponent } from './game-item/game-item.component';
     SuccessAlertComponent,
     GameListComponent,
     GameItemComponent,
+    NewGameComponent,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],
