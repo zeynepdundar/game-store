@@ -2,7 +2,7 @@
   <h3>Game List</h3>
   <p class="no-results">no records found</p>
   <app-game-item
-    *ngFor="let game of games; let i = index"
-    [game]="game"
+    *ngFor="let gameEl of games; let i = index"
+    [game]="gameEl"
   ></app-game-item>
 </div>
