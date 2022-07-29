@@ -3,19 +3,35 @@
   <form [formGroup]="gameform" autocomplete="off">
     <div class="new-game__form">
       <div class="new-game__control">
-        <input type="text" #gameName />
+        <input
+          type="text"
+          #gameName
+          formControlName="gameName"
+          placeholder="Game Name"
+        />
       </div>
       <div class="new-game__control">
-        <input type="text" #bundle />
+        <input
+          type="text"
+          #bundle
+          formControlName="bundle"
+          placeholder="Bundle"
+        />
       </div>
       <div class="new-game__control">
-        <input type="text" #owner />
+        <input type="text" #owner formControlName="owner" placeholder="Owner" />
       </div>
       <div class="new-game__control">
-        <input class="file-upload" type="file" id="file" />
+        <input
+          class="file-upload"
+          type="file"
+          id="file"
+          #icon
+          formControlName="icon"
+        />
       </div>
       <div class="new-game__action">
-        <button (click)="save()">Save</button>
+        <button (click)="save()" [disabled]="gameform.invalid">Save</button>
       </div>
     </div>
   </form>

@@ -2,5 +2,5 @@
   <p><span>Game Name: </span>{{ game.gameName }}</p>
   <p><span>Bundle: </span>{{ game.bundle }}</p>
   <p><span>Owner: </span> {{ game.owner }}</p>
-  <button class="delete-game">delete</button>
+  <button class="delete-game" (click)="remove(game.id)">delete</button>
 </div>
