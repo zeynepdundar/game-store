@@ -1,10 +1,10 @@
 /* navbar styles*/
 nav {
   background-color: #45187f;
-  color: #f0f2f3;
+  color: #f2f5f6;
   margin: 0 auto;
   padding: 0.5rem 3rem;
-  font-family: var(--mono);
+  font-family: Proxima Nova, Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 80%;
 }
 
@@ -33,11 +33,21 @@ nav li:first-child {
   /* flex-basis: 100%;
   text-align: center; */
 }
-nav li:last-child a {
+
+nav li a {
   text-decoration: none;
+  color: #f2f5f6;
+  font-size: 1.25rem;
+}
+nav li a:hover {
+  text-decoration: underline;
+  padding-bottom: 0.25rem;
+  color: #f2f5f6;
+}
+
+nav li:last-child a {
   border: 1px solid #51d5ad;
   background-color: #51d5ad;
-  color: #f2f5f6;
   border-radius: 3rem;
   padding: 1.15rem 2.3rem;
   font-size: 1.25rem;

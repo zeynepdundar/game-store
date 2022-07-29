@@ -5,7 +5,7 @@ import { NewGameComponent } from './new-game/new-game.component';
 
 const routes: Routes = [
   { path: 'new-game', component: NewGameComponent },
-  { path: '', component: GamesComponent },
+  { path: 'games', component: GamesComponent },
 ];
 
 @NgModule({ imports: [RouterModule.forRoot(routes)], exports: [RouterModule] })
