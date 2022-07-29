@@ -34,6 +34,16 @@ export class NewGameComponent implements OnInit {
   ngOnInit(): void {}
 
   save() {
+    const newId = this.gameService.getGames().length;
+
+    // if(newId !== undefined || newId===0){
+    //    this.gameform.setValue('id')
+    // }
+    // else{
+    //    obj.id = 0;
+    // }
+    // this.userArray.push(obj);
+
     if (this.gameform.invalid)
       // true if any form validation fail
       return;
@@ -46,10 +56,5 @@ export class NewGameComponent implements OnInit {
 
     //Redirecting to user List page after save or update
     // this.router.navigate(['/user']);
-  }
-  onCreateGame(gameName, bundle, owner) {
-    this.gameAdded.emit({ gameName: gameName, bundle: bundle, owner: owner });
-    this.gameCreated = true;
-    console.log('New game created!');
   }
 }
