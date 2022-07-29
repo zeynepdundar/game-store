@@ -1,5 +1,6 @@
 import { GameService } from './../../../service/game.service';
 import { Game } from './../../game.model';
+import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
@@ -9,6 +10,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class GameItemComponent implements OnInit {
   @Input() game: Game;
+  faTrashCan = faTrashCan;
 
   constructor(private gameService: GameService) {}
 

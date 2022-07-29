@@ -1,6 +1,8 @@
 <div class="card">
-  <p><span>Game Name: </span>{{ game.gameName }}</p>
+  <div id="trashIcon">
+    <fa-icon [icon]="faTrashCan" (click)="remove(game.id)"></fa-icon>
+  </div>
+  <h2>{{ game.gameName }}</h2>
   <p><span>Bundle: </span>{{ game.bundle }}</p>
   <p><span>Owner: </span> {{ game.owner }}</p>
-  <button class="delete-game" (click)="remove(game.id)">delete</button>
 </div>

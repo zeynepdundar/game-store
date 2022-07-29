@@ -4,7 +4,6 @@ nav {
   color: #f2f5f6;
   margin: 0 auto;
   padding: 0.5rem 3rem;
-  font-family: Proxima Nova, Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 80%;
 }
 
@@ -46,6 +45,7 @@ nav li a:hover {
 }
 
 nav li:last-child a {
+  text-decoration: none;
   border: 1px solid #51d5ad;
   background-color: #51d5ad;
   border-radius: 3rem;

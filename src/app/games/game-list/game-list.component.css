@@ -1,14 +1,22 @@
 .game-list {
   margin: 0 auto;
-  width: 60%;
 }
 
-h3 {
-  font: bold;
+h4 {
+  font-size: 2.25rem;
+  line-height: 1.2;
+  color: #7945b2;
+  font-weight: 700;
 }
 
 .no-results {
   color: #45187f;
   font-weight: bolder;
   text-align: center;
+}
+
+.div {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
 }
