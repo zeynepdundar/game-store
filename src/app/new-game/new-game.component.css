@@ -79,3 +79,7 @@ input:focus {
 span {
   margin-left: 1rem;
 }
+
+.invalid-feedback {
+  color: red;
+}
