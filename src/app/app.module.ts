@@ -1,6 +1,7 @@
+import { GameService } from './service/game.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -9,7 +10,6 @@ import { GameListComponent } from './games/game-list/game-list.component';
 import { GameItemComponent } from './games/game-list/game-item/game-item.component';
 import { NewGameComponent } from './new-game/new-game.component';
 import { GamesComponent } from './games/games.component';
-import { GameDetailComponent } from './games/game-detail/game-detail.component';
 
 @NgModule({
   declarations: [
@@ -20,10 +20,9 @@ import { GameDetailComponent } from './games/game-detail/game-detail.component';
     GameListComponent,
     NewGameComponent,
     GamesComponent,
-    GameDetailComponent,
   ],
-  imports: [BrowserModule, FormsModule],
-  providers: [],
+  imports: [BrowserModule, FormsModule, ReactiveFormsModule],
+  providers: [GameService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

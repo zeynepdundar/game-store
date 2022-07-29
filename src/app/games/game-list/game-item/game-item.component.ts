@@ -8,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GameItemComponent implements OnInit {
   game: Game = new Game(
-    'test game',
+    1,
     'testbundle.com',
     'erdem@gmail.com',
-    'nothing'
+    'nothing',
+    'sdsdfs'
   );
 
   constructor() {}

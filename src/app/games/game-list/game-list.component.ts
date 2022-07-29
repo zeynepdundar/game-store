@@ -1,4 +1,6 @@
+import { GameService } from './../../service/game.service';
 import { Game } from './../game.model';
+
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
@@ -8,14 +10,12 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class GameListComponent implements OnInit {
   allowNewGame = false;
+  games: Game[] = [];
 
-  // games: Game[] = [new Game('Game x', 'bundle y', 'owner z', 'image')];
-
-  @Input() games: Game[];
-
-  constructor() {}
+  constructor(private gameService: GameService) {}
 
   ngOnInit(): void {
-    console.log('games', this.games);
+    this.games = this.gameService.getGames();
+    console.log('new:', this.games);
   }
 }

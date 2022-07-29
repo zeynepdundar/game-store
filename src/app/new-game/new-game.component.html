@@ -1,12 +1,12 @@
 <div class="new-game">
   <header class="title">New Game</header>
-  <form>
+  <form [formGroup]="gameform" autocomplete="off">
     <div class="new-game__form">
       <div class="new-game__control">
         <input type="text" #gameName />
       </div>
       <div class="new-game__control">
-        <input type="text" #bundler />
+        <input type="text" #bundle />
       </div>
       <div class="new-game__control">
         <input type="text" #owner />
@@ -15,11 +15,7 @@
         <input class="file-upload" type="file" id="file" />
       </div>
       <div class="new-game__action">
-        <button
-          (click)="onCreateGame(gameName.value, bundler.value, owner.value)"
-        >
-          Save
-        </button>
+        <button (click)="save()">Save</button>
       </div>
     </div>
   </form>
