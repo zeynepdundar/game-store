@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { SuccessAlertComponent } from './success-alert/success-alert.component';
 import { GameItemComponent } from './games/game-list/game-item/game-item.component';
-import { GamesComponent } from './games/games.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 
 @NgModule({
@@ -20,7 +20,13 @@ import { AppRoutingModule, routingComponents } from './app-routing.module';
     routingComponents,
     GameListComponent,
   ],
-  imports: [BrowserModule, FormsModule, ReactiveFormsModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    AppRoutingModule,
+    FontAwesomeModule,
+  ],
   providers: [GameService],
   bootstrap: [AppComponent],
 })

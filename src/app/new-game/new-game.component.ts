@@ -1,6 +1,6 @@
+import { faPaperclip } from '@fortawesome/free-solid-svg-icons';
 import { GameService } from './../service/game.service';
 import { Component, EventEmitter, Output, OnInit } from '@angular/core';
-import { Game } from './../games/game.model';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -12,6 +12,7 @@ export class NewGameComponent implements OnInit {
   @Output() gameAdded = new EventEmitter<{}>();
   gameCreated = false;
   gameform: FormGroup;
+  faPaperclip = faPaperclip;
 
   constructor(private gameService: GameService, private fb: FormBuilder) {
     this.gameform = this.fb.group({
