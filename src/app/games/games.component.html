@@ -1,9 +1,11 @@
 <div class="container">
-  <div class="search-bar">
-    <input type="text" [(ngModel)]="gameSearched" placeholder="search" />
+  <div class="row">
+    <div class="search-bar">
+      <input type="text" [(ngModel)]="gameSearched" placeholder="search" />
+    </div>
+    <div>
+      <a class="new-game" [routerLink]="['/new-game']">new game</a>
+    </div>
   </div>
-  <div>
-    <a class="new-game" [routerLink]="['/new-game']">new game</a>
-  </div>
+  <app-game-list></app-game-list>
 </div>
-<app-game-list></app-game-list>

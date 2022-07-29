@@ -1,5 +1,5 @@
 <div class="new-game">
-  <header class="title">New Game</header>
+  <h4>Add New Game</h4>
   <form [formGroup]="gameform" autocomplete="off">
     <div class="new-game__form">
       <div class="new-game__control">
@@ -21,14 +21,16 @@
       <div class="new-game__control">
         <input type="text" #owner formControlName="owner" placeholder="Owner" />
       </div>
-      <div class="new-game__control">
-        <input
-          class="file-upload"
-          type="file"
-          id="file"
-          #icon
-          formControlName="icon"
-        />
+      <div class="new-game__control file-attach">
+        <label
+          ><i class="fa fa-paperclip" aria-hidden="true"></i>Choose Files
+          <input
+            class="file-upload"
+            type="file"
+            id="file"
+            #icon
+            formControlName="icon"
+        /></label>
       </div>
       <div class="new-game__action">
         <button (click)="save()" [disabled]="gameform.invalid">Save</button>

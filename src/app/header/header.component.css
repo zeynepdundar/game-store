@@ -1,33 +1,17 @@
-header {
-  background-color: #45187f;
-  color: #f0f2f3;
-  padding: 0.5rem;
-}
-
-h2 {
-  font-size: 28px;
-  margin-left: 1.25rem;
-}
-
 /* navbar styles*/
 nav {
+  background-color: #45187f;
+  color: #f0f2f3;
+  margin: 0 auto;
+  padding: 0.5rem 3rem;
   font-family: var(--mono);
   font-size: 80%;
-  padding: 1rem;
 }
 
-nav h1 a {
-  font-family: var(--sans);
-}
-
-nav [class*="fa-"] {
-  font-size: 150%;
-  color: var(--green);
-}
-
-nav h1 [class*="fa-"] {
-  font-size: 100%;
-  color: var(--green);
+nav li:first-child {
+  flex-basis: auto;
+  text-align: left;
+  margin-right: auto;
 }
 
 nav ul {
@@ -41,9 +25,13 @@ nav ul {
   gap: 2rem;
 }
 
+nav img {
+  width: 50%;
+}
+
 nav li:first-child {
-  flex-basis: 100%;
-  text-align: center;
+  /* flex-basis: 100%;
+  text-align: center; */
 }
 nav a {
   color: var(--whey);

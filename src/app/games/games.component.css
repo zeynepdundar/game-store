@@ -1,19 +1,23 @@
 .container {
   padding: 0;
-  margin: 0;
+  padding-top: 3rem;
+  margin: 0 auto;
+  width: 50%;
+}
+
+.container > .row {
   margin-bottom: 2rem;
   display: flex;
-  flex-wrap: row wrap;
   justify-content: space-between;
   gap: 1rem;
-  font-size: 1rem;
 }
 a {
+  text-decoration: none;
   border: 1px solid #51d5ad;
   background-color: #51d5ad;
   color: white;
-  border-radius: 26px;
-  padding: 0.75rem;
+  border-radius: 3rem;
+  padding: 1rem 2.3rem;
 }
 
 a:hover {
