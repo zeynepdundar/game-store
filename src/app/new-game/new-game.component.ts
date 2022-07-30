@@ -41,24 +41,16 @@ export class NewGameComponent implements OnInit {
   ngOnInit(): void {}
 
   save() {
-    const newId = this.gameService.getGames().length;
-
-    // if(newId !== undefined || newId===0){
-    //    this.gameform.setValue('id')
-    // }
-    // else{
-    //    obj.id = 0;
-    // }
-    // this.userArray.push(obj);
-
     if (this.gameform.invalid)
       // true if any form validation fail
       return;
 
-    if (this.gameform.get('id')?.value === 0) {
-      // on Create New User
-      this.gameService.addGame(this.gameform.value);
-    }
+    // on Create New User
+    const newId = this.gameService.getGames().length;
+    console.log('newId:', newId);
+    this.gameform.controls['id'].setValue(newId);
+    this.gameService.addGame(this.gameform.value);
+
     console.log('New game created!', this.gameform);
 
     //Redirecting to user List page after save or update

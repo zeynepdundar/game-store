@@ -1,8 +1,9 @@
 <div class="game-list">
   <h4>Games</h4>
-  <p class="no-results">no records found</p>
+  <p class="no-results" *ngIf="games.length === 0">no records found</p>
   <div class="div">
     <app-game-item
+      (gameRemoved)="onDeleteClick($event)"
       *ngFor="let gameEl of games; let i = index"
       [game]="gameEl"
     ></app-game-item>

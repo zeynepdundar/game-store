@@ -18,4 +18,8 @@ export class GameListComponent implements OnInit {
     this.games = this.gameService.getGames();
     console.log('new:', this.games);
   }
+
+  onDeleteClick(): void {
+    this.games = this.gameService.getGames();
+  }
 }

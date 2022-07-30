@@ -1,7 +1,7 @@
 import { GameService } from './../../../service/game.service';
 import { Game } from './../../game.model';
 import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-game-item',
@@ -10,6 +10,10 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class GameItemComponent implements OnInit {
   @Input() game: Game;
+  @Output() gameRemoved: EventEmitter<boolean> = new EventEmitter<boolean>(
+    false
+  );
+
   faTrashCan = faTrashCan;
 
   constructor(private gameService: GameService) {}
@@ -18,5 +22,7 @@ export class GameItemComponent implements OnInit {
 
   remove(id: number) {
     this.gameService.removeGame(id);
+    this.gameRemoved.emit(true);
+    // this.userList = this.userService.getUsers();
   }
 }
