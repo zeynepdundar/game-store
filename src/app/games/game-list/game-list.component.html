@@ -1,6 +1,8 @@
 <div class="game-list">
   <h4>Games</h4>
-  <p class="no-results" *ngIf="games.length === 0">no records found</p>
+  <p class="no-results" *ngIf="games.length === 0">
+    Sorry, but we couldn't find anything.
+  </p>
   <div class="div">
     <app-game-item
       (gameRemoved)="onDeleteClick($event)"

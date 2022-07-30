@@ -1,7 +1,15 @@
 import { GameService } from './../../../service/game.service';
 import { Game } from './../../game.model';
 import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
-import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Input,
+  EventEmitter,
+  Output,
+  SecurityContext,
+} from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-game-item',
@@ -16,10 +24,16 @@ export class GameItemComponent implements OnInit {
 
   faTrashCan = faTrashCan;
 
-  constructor(private gameService: GameService) {}
+  constructor(
+    private gameService: GameService,
+    private sanitizer: DomSanitizer
+  ) {}
 
   ngOnInit(): void {}
 
+  getSantizeUrl(url: string) {
+    return this.sanitizer.bypassSecurityTrustHtml(url);
+  }
   remove(id: number) {
     this.gameService.removeGame(id);
     this.gameRemoved.emit(true);
