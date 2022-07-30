@@ -1,6 +1,7 @@
 .new-game {
   max-width: 40%;
   margin: 0 auto;
+  font-family: Proxima Nova, Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
 .new-game__control {
@@ -80,6 +81,12 @@ span {
   margin-left: 1rem;
 }
 
-.invalid-feedback {
+small {
   color: red;
+  padding-top: 4px;
+  font-size: 14px;
+}
+.new-game__control .is-invalid {
+  border-color: red;
+  background: #fbdada;
 }

@@ -8,8 +8,22 @@
           #gameName
           formControlName="gameName"
           placeholder="Game Name"
+          [ngClass]="{
+            'form-control': true,
+            'is-invalid':
+              gameform.get('gameName')?.invalid &&
+              (gameform.get('gameName')?.dirty ||
+                gameform.get('gameName')?.touched)
+          }"
         />
-        <div class="invalid-feedback">This field is required</div>
+        <small
+          *ngIf="
+            gameform.get('gameName')?.invalid &&
+            (gameform.get('gameName')?.dirty ||
+              gameform.get('gameName')?.touched)
+          "
+          >This field is required</small
+        >
       </div>
       <div class="new-game__control">
         <input
@@ -17,10 +31,41 @@
           #bundle
           formControlName="bundle"
           placeholder="Bundle"
+          [ngClass]="{
+            'form-control': true,
+            'is-invalid':
+              gameform.get('bundle')?.invalid &&
+              (gameform.get('bundle')?.dirty || gameform.get('bundle')?.touched)
+          }"
         />
+        <small
+          *ngIf="
+            gameform.get('bundle')?.invalid &&
+            (gameform.get('bundle')?.dirty || gameform.get('bundle')?.touched)
+          "
+          >This field is required</small
+        >
       </div>
       <div class="new-game__control">
-        <input type="text" #owner formControlName="owner" placeholder="Owner" />
+        <input
+          type="text"
+          #owner
+          formControlName="owner"
+          placeholder="Owner"
+          [ngClass]="{
+            'form-control': true,
+            'is-invalid':
+              gameform.get('owner')?.invalid &&
+              (gameform.get('owner')?.dirty || gameform.get('owner')?.touched)
+          }"
+        />
+        <small
+          *ngIf="
+            gameform.get('owner')?.invalid &&
+            (gameform.get('owner')?.dirty || gameform.get('owner')?.touched)
+          "
+          >Please enter a valid email</small
+        >
       </div>
       <div class="new-game__control file-attach">
         <label
@@ -31,8 +76,21 @@
             id="file"
             #icon
             formControlName="icon"
+            [ngClass]="{
+              'form-control': true,
+              'is-invalid':
+                gameform.get('icon')?.invalid &&
+                (gameform.get('icon')?.dirty || gameform.get('icon')?.touched)
+            }"
         /></label>
       </div>
+      <small
+        *ngIf="
+          gameform.get('icon')?.invalid &&
+          (gameform.get('icon')?.dirty || gameform.get('icon')?.touched)
+        "
+        >Please attach a icon file</small
+      >
       <div class="new-game__action">
         <button (click)="save()" [disabled]="gameform.invalid">Save</button>
       </div>
