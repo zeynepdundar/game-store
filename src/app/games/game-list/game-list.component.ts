@@ -1,7 +1,7 @@
 import { GameService } from './../../service/game.service';
 import { Game } from './../game.model';
 
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-game-list',
@@ -11,12 +11,25 @@ import { Component, OnInit, Input } from '@angular/core';
 export class GameListComponent implements OnInit {
   allowNewGame = false;
   games: Game[] = [];
+  @Input() searchedGame: string;
+  a;
 
   constructor(private gameService: GameService) {}
 
   ngOnInit(): void {
     this.games = this.gameService.getGames();
-    console.log('new:', this.games);
+  }
+  ngOnChanges(changes: SimpleChanges) {
+    if (this.searchedGame || this.searchedGame !== '') {
+      this.games = this.games.filter((e) => {
+        return (
+          e.gameName.toLowerCase() === this.searchedGame.toLowerCase() ||
+          e.gameName.toLowerCase().indexOf(this.searchedGame.toLowerCase()) >= 0
+        );
+      });
+    } else {
+      this.games = this.gameService.getGames();
+    }
   }
 
   onDeleteClick(): void {

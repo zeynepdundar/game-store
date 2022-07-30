@@ -47,7 +47,6 @@ export class NewGameComponent implements OnInit {
 
     // on Create New User
     const newId = this.gameService.getGames().length;
-    console.log('newId:', newId);
     this.gameform.controls['id'].setValue(newId);
     this.gameService.addGame(this.gameform.value);
 

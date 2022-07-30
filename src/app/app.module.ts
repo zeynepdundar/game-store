@@ -10,6 +10,7 @@ import { SuccessAlertComponent } from './success-alert/success-alert.component';
 import { GameItemComponent } from './games/game-list/game-item/game-item.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppRoutingModule, routingComponents } from './app-routing.module';
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { AppRoutingModule, routingComponents } from './app-routing.module';
     GameItemComponent,
     routingComponents,
     GameListComponent,
+    FilterPipe,
   ],
   imports: [
     BrowserModule,

@@ -1,8 +1,8 @@
 <div class="container">
   <div class="row">
     <div class="search-bar">
-      <input type="text" [(ngModel)]="gameSearched" placeholder="search" />
+      <input type="text" [(ngModel)]="searchedGame" placeholder="search" />
     </div>
   </div>
-  <app-game-list></app-game-list>
+  <app-game-list [searchedGame]="searchedGame"></app-game-list>
 </div>

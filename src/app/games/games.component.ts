@@ -1,5 +1,5 @@
 import { Game } from './game.model';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-games',
@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./games.component.css'],
 })
 export class GamesComponent implements OnInit {
-  gameSearched = '';
+  searchedGame: string = '';
 
   constructor() {}
 
