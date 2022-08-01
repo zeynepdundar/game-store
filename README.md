@@ -29,23 +29,13 @@ store management tools like ngrx
 • Name, bundle, owner fields are string and icon field accept file input
 • All fields are required
 • Owner field should accept only valid email address
-• Validate the bundle field with this regex: /^([A-Za-z]{1}[A-Za-z\d_]_\.)+[A-Za-z][a-za-z\d_]_$/
+• Validate the bundle field with this regex: /^([A-Za-z]{1}[A-Za-z\d_]_\.)+[A-Za-z]a-za-z\d_]\_$/
 • Use Angular reactive forms or template driven forms
 • Form validation
 • After user submit game successfully, show message and redirect user to game list page
 
-### 3. Design Pokemon details
+### 3. Requirements
 
-You will notice that in the selected section, only the header is designed for you. You have free autonomy over how to design the details section, and you are encouraged to implement the details page yourself.
-
-## What we are looking for
-
-- Ability to create forms
-- Ability to implement the various form states (field validation, error, success etc)
-- Ability to implement style to spec
-- Responsiveness
-- Ability to use Graphql correctly
-- Ability to integrate a real API
-- Ability to implement a pagination API
-- Clean-code and separation of component concerns
-- Ability to design new UIs
+• Angular framework
+• Git
+• Using css grid and flexbox without library for layout is a plus but also you can use design libraries like bootstrap
