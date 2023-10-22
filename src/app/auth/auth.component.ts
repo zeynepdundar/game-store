@@ -1,5 +1,7 @@
 import { Component, OnInit, Output } from '@angular/core';
 import { FormGroup, NgForm } from '@angular/forms';
+import { Observable } from 'rxjs';
+import { AuthResponseData, AuthService } from './auth.service';
 
 @Component({
   selector: 'app-auth',
@@ -8,9 +10,11 @@ import { FormGroup, NgForm } from '@angular/forms';
 })
 export class AuthComponent implements OnInit {
   searchedGame: string = '';
-  isLoginMode = true;
+  isLoginMode: boolean = true;
+  isLoading: boolean = false;
+  error: string = '';
 
-  constructor() {}
+  constructor(private authService: AuthService) {}
 
   ngOnInit(): void {
     console.log('', this.isLoginMode);
@@ -24,6 +28,32 @@ export class AuthComponent implements OnInit {
   }
 
   onSubmit(form: NgForm): void {
-    form.reset()
+    if (!form.valid) return;
+    const email = form.value.email;
+    const password = form.value.password;
+
+    let authObs: Observable<AuthResponseData>;
+
+    this.isLoading = true;
+
+    if (this.isLoginMode) {
+      authObs = this.authService.login(email, password);
+    } else {
+      authObs = this.authService.signup(email, password);
+    }
+    authObs.subscribe(
+      (resData) => {
+        console.log(resData);
+        this.isLoading = false;
+      },
+      (errorMessage) => {
+        console.log('err', errorMessage);
+
+        this.error = errorMessage;
+        this.isLoading = false;
+      }
+    );
+
+    form.reset();
   }
 }
