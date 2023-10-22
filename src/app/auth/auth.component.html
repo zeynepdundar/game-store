@@ -1,0 +1,21 @@
+<div class="new-game">
+  <form autocomplete="off" #authForm = "ngForm" (ngSubmit)="onSubmit(authForm)">
+    <div class="new-game__form">
+      <div class="new-game__control">
+        <input type="text" id="email" placeholder="Email" name="email" ngModel required email/>
+      </div>
+      <div class="new-game__control">
+        <input type="password" #password placeholder="Password" name="password" ngModel required  minlength="6"/>
+      </div>
+
+      <div class="new-game__action">
+        <button (click)="save()" [disabled]="!authForm.valid" type="submit">
+          {{ isLoginMode ? "Sign In" : "Sign Up" }}
+        </button>
+        <button (click)="onSwitchMode()" [disabled]="false" type="button">
+          Switch to {{ !isLoginMode ? "Sign In" : "Sign Up" }}
+        </button>
+      </div>
+    </div>
+  </form>
+</div>

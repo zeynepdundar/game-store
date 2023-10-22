@@ -8,9 +8,9 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { SuccessAlertComponent } from './success-alert/success-alert.component';
 import { GameItemComponent } from './games/game-list/game-item/game-item.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { FilterPipe } from './filter.pipe';
+import { AuthComponent } from './auth/auth.component';
 
 @NgModule({
   declarations: [
@@ -21,13 +21,13 @@ import { FilterPipe } from './filter.pipe';
     routingComponents,
     GameListComponent,
     FilterPipe,
+    AuthComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    FontAwesomeModule,
   ],
   providers: [GameService],
   bootstrap: [AppComponent],

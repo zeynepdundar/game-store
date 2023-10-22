@@ -1,0 +1,93 @@
+.new-game {
+    max-width: 40%;
+    margin: 0 auto;
+    font-family: Proxima Nova, Helvetica Neue, Helvetica, Arial, sans-serif;
+  }
+  
+  .new-game__control {
+    margin-top: 1.5rem;
+  }
+  .new-game__action {
+    text-align: right;
+    padding-top: 2rem;
+  }
+  
+  .file-upload {
+    border: none;
+  }
+  
+  button {
+    border: 1px solid #51d5ad;
+    background-color: #51d5ad;
+    color: white;
+    border-radius: 26px;
+    width: 15%;
+    border-radius: 26px;
+    padding: 1rem;
+  }
+  
+  button:hover {
+    background-color: #43ab8c;
+  }
+  
+  button:disabled,
+  button:focus:disabled,
+  button:hover:disabled,
+  button:active:disabled {
+    background: #c2c8c8;
+    border-color: #c2c8c8;
+    color: #666666;
+    cursor: not-allowed;
+  }
+  
+  h4 {
+    font-size: 2.25rem;
+    line-height: 1.2;
+    color: #7945b2;
+    font-weight: 700;
+  }
+  
+  input {
+    font: inherit;
+    padding: 1.5rem 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 100%;
+  }
+  
+  input:focus {
+    outline: none !important;
+    border: 1px solid #51d5ad;
+  }
+  
+  .file-attach {
+    padding: 1rem;
+    cursor: pointer;
+    border: 1px dashed grey;
+    border-radius: 8px;
+    width: 100%;
+  }
+  .file-attach label {
+    height: 100%;
+    width: 100%;
+  }
+  #file {
+    display: none;
+    margin-left: 1rem;
+    height: 100%;
+    width: 100%;
+  }
+  span {
+    margin-left: 1rem;
+  }
+  
+  small {
+    color: red;
+    padding-top: 4px;
+    font-size: 14px;
+  }
+  .new-game__control .is-invalid {
+    border-color: red;
+    background: #fbdada;
+  }
+  
